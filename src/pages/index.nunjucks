@@ -1,0 +1,7 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %} 
+<h1>This is the index page sample</h1>
+<!-- Adds the navigation partial -->
+{% include "partials/header.nunjucks" %}
+{% endblock %}
