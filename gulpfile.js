@@ -11,12 +11,12 @@ var IMG_DIR = './src/assets/img/**/*';
 var JS_DIR = './src/assets/js/**/*';
 
 gulp.task('nunjucks', function () {
-  return watch('src/**/*.nunjucks', { ignoreInitial: false }, function() {
+  return watch(NUNJUCK_DIR, { ignoreInitial: false }, function() {
     gulp.src('src/pages/**/*.+(html|nunjucks)')
       .pipe(nunjucksRender({
         path: 'src/templates',
         data: {
-          asset_path: '.'
+          asset_path: '/assets'
         },
         envOptions: {
           watch: true

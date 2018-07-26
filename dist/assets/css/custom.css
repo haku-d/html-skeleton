@@ -1,2 +1,28 @@
 body {
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: .875rem; }
+
+[role="main"] {
+  padding-top: 48px; }
+
+.en-rjm-bg {
+  background: linear-gradient(90deg, #0087ce 0, #0088ce 40%, #36b59e); }
+
+.sidebar {
+  width: 58px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  /* Behind the navbar */
+  padding: 48px 0 0;
+  /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1); }
+
+.sidebar-container {
+  padding-left: 75px;
+  padding-top: 40px;
+  padding-right: 15px; }
+  .sidebar-container section {
+    border: 1px solid #ccc; }

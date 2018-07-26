@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="/assets/css/bootstrap.css">
-  <link rel="stylesheet" href="/assets/css/custom.css">
-</head>
-<body>
-  <!-- header.nunjucks -->
-<nav class="navbar fixed-top en-rjm-bg flex-md-nowrap p-0">
-  <a class="navbar-brand text-light col-sm-3 col-md-2 mr-0" href="#">MJSLINK NX-II</a>
-  <ul class="navbar-nav px-3">
-    <li class="nav-item text-nowrap">
-      <a class="nav-link text-light" href="#">Sign out</a>
-    </li>
-  </ul>
-</nav>
-  <div class="container-fluid">
-    <div class="row">
-      <nav class="d-none d-md-block bg-light sidebar">
+<nav class="d-none d-md-block bg-light sidebar">
   <div class="sidebar-sticky">
     <ul class="nav flex-column">
       <li class="nav-item">
@@ -82,17 +62,3 @@
     </section>
   </div>
 </div>
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-         
-<h1></h1>
-
-      </main>
-    </div>
-  </div>
-  <script src="js/main.js"></script>
-  <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
-  <script>
-    feather.replace()
-  </script>
-</body>
-</html>
