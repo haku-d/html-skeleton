@@ -12,11 +12,22 @@
 }
 
 .sidebar-container {
-  padding-left: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding-left: 60px;
   padding-top: 40px;
   padding-right: 15px;
 
   section {
     border: 1px solid #ccc;
+  }
+
+  ul, li {
+    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
 }
