@@ -9,17 +9,18 @@
 <body>
   {% include "./partials/header.nunjucks" %}
   <div class="container-fluid">
-    <div class="row">
+    <div class="row flex-xl-nowrap">
       {% include "./partials/side-menu.nunjucks" %}
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <main role="main">
         {% block content %}{% endblock %}
       </main>
     </div>
   </div>
-  <script src="js/main.js"></script>
   <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
   <script>
     feather.replace()
   </script>
+  <script src="{{ asset_path }}/js/main.js"></script>
 </body>
 </html>

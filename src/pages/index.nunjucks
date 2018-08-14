@@ -1,5 +1,7 @@
 {% extends "layout.nunjucks" %}
 
-{% block content %} 
-<h1></h1>
+{% block content %}
+  <div class="col-12">
+    <h1>Notation</h1>
+  </div>
 {% endblock %}

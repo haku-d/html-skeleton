@@ -9,7 +9,7 @@
 <body>
   <!-- header.nunjucks -->
 <nav class="navbar fixed-top en-rjm-bg flex-md-nowrap p-0">
-  <a class="navbar-brand text-light col-sm-3 col-md-2 mr-0" href="#">MJSLINK NX-II</a>
+  <a class="navbar-brand text-light col-sm-3 col-md-2 mr-0" href="#">...</a>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
       <a class="nav-link text-light" href="#">Sign out</a>
@@ -17,10 +17,10 @@
   </ul>
 </nav>
   <div class="container-fluid">
-    <div class="row">
-      <nav class="d-none d-md-block bg-light sidebar">
+    <div class="row flex-xl-nowrap">
+      <nav id="sidebar" class="d-block bg-light sidebar">
   <div class="sidebar-sticky">
-    <ul class="nav flex-column">
+    <ul class="nav d-flex flex-column">
       <li class="nav-item">
         <a class="nav-link active" href="#">
           <span data-feather="home"></span>
@@ -53,59 +53,66 @@
       </li>
     </ul>
   </div>
+  
+  <div class="sidebar-container align-items-stretch">
+    <div class="row flex-fill">
+      
+      <section class="col-md d-flex align-items-stretch">
+        <div class="menu-container flex-fill">
+          <div class="menu-title bg-primary d-flex justify-content-center align-items-center">
+            <span data-feather="home"></span>
+            <span class="sc-gqjmRU eAhQGX" data-reactid="37">Department</span>
+          </div>
+          <div class="menu-content">
+            <div class="menu-item"></div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="col-md d-flex align-items-stretch">
+        <div class="menu-container flex-fill">
+          <div class="menu-title bg-primary d-flex justify-content-center align-items-center">
+            <span data-feather="home"></span>
+            <span class="sc-gqjmRU eAhQGX" data-reactid="37">Department</span>
+          </div>
+          <div class="menu-content"></div>
+        </div>
+      </section>
+      
+      <section class="col-md d-flex align-items-stretch">
+        <div class="menu-container flex-fill">
+          <div class="menu-title bg-primary d-flex justify-content-center align-items-center">
+            <span data-feather="home"></span>
+            <span class="sc-gqjmRU eAhQGX" data-reactid="37">Department</span>
+          </div>
+          <div class="menu-content"></div>
+        </div>
+      </section>
+      
+      <section class="col-md d-flex align-items-stretch">
+        <div class="menu-container flex-fill">
+          <div class="menu-title bg-primary d-flex justify-content-center align-items-center">
+            <span data-feather="home"></span>
+            <span class="sc-gqjmRU eAhQGX" data-reactid="37">Department</span>
+          </div>
+          <div class="menu-content"></div>
+        </div>
+      </section>
+    </div>
+  </div>
 </nav>
-<div class="sidebar-container col-12 col-lg-12">
-  <div class="justify-content-between align-items-center border-bottom">
-    <a class="nav-link active" href="#">
-      <span data-feather="arrow-left"></span>
-    </a>
-  </div>
-  <div class="align-items-stretch justify-content-between align-items-center" style="height: 100%; overflow-y: auto">
-    <section class="col-md">
-      <header>Column 1</header>
-      <ul>
-        <li>
-          <a class="nav-link d-inline-flex" href="#">
-            <span data-feather="folder"></span>
-            Menu Item #1
-          </a>
-        </li>
-        <li>
-          <a class="nav-link d-inline-flex" href="#">
-            <span data-feather="folder"></span>
-            Menu Item #1
-          </a>
-        </li>
-        <li>
-          <a class="nav-link d-inline-flex" href="#">
-            <span data-feather="folder"></span>
-            Menu Item #1
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="col-md">
-      <header>Column 2</header>
-    </section>
-    <section class="col-md">
-      <header>Column 3</header>
-    </section>
-    <section class="col-md">
-      <header>Column 4</header>
-    </section>
-  </div>
-</div>
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <main role="main">
          
 <h1>This is the about page sample</h1>
 
       </main>
     </div>
   </div>
-  <script src="js/main.js"></script>
   <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
   <script>
     feather.replace()
   </script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>

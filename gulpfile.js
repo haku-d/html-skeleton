@@ -26,21 +26,6 @@ gulp.task('nunjucks', function () {
   });
 });
 
-
-// gulp.task('nunjucks', function () {
-//   return gulp.src('src/pages/**/*.+(html|nunjucks)')
-//     .pipe(nunjucksRender({
-//       path: 'src/templates',
-//       data: {
-//         asset_path: '.'
-//       },
-//       envOptions: {
-//         watch: true
-//       }
-//     }))
-//     .pipe(gulp.dest('dist'));
-// });
-
 gulp.task('sass', function () {
   return gulp.src(SASS_DIR)
     .pipe(sass().on('error', sass.logError))
@@ -63,4 +48,4 @@ gulp.task('watch', function() {
   gulp.watch(JS_DIR, ['js']);
 });
 
-gulp.task('build', ['watch', 'sass', 'img', 'js', 'nunjucks']);
+gulp.task('build', ['sass', 'img', 'js', 'nunjucks']);
