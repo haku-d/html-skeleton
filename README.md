@@ -5,7 +5,7 @@ Provide a simple skeleton which support build up simple HTML template source cod
 ## Features
 
 1. Using `nunjucks` as template engine 
-Everything about `nunjucks` found at `https://mozilla.github.io/nunjucks/`
+Everything about `nunjucks` found at [Nunjucks](https://mozilla.github.io/nunjucks/)
 
 ## Getting Started
 
@@ -47,8 +47,6 @@ npm start
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
