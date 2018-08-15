@@ -11,19 +11,14 @@ var IMG_DIR = './src/assets/img/**/*';
 var JS_DIR = './src/assets/js/**/*';
 
 gulp.task('nunjucks', function () {
-  return watch(NUNJUCK_DIR, { ignoreInitial: false }, function() {
-    gulp.src('src/pages/**/*.+(html|nunjucks)')
+  gulp.src('src/pages/**/*.+(html|nunjucks)')
       .pipe(nunjucksRender({
         path: 'src/templates',
         data: {
           asset_path: '/assets'
-        },
-        envOptions: {
-          watch: true
         }
       }))
       .pipe(gulp.dest('dist'));
-  });
 });
 
 gulp.task('sass', function () {
@@ -46,6 +41,7 @@ gulp.task('watch', function() {
   gulp.watch(SASS_DIR, ['sass']);
   gulp.watch(IMG_DIR, ['img']);
   gulp.watch(JS_DIR, ['js']);
+  gulp.watch(NUNJUCK_DIR, { ignoreInitial: false }, ['nunjucks']);
 });
 
 gulp.task('build', ['sass', 'img', 'js', 'nunjucks']);
