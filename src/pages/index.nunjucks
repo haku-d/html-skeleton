@@ -2,6 +2,6 @@
 
 {% block content %}
   <div class="col-12">
-    <h1>Notation</h1>
+    <h1>Index Page Content</h1>
   </div>
 {% endblock %}

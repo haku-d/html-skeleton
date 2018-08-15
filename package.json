@@ -7,7 +7,7 @@
     "build": "gulp build",
     "watch": "gulp watch",
     "server": "http-server ./dist",
-    "start": "concurrently --kill-others \"npm run watch\" \"npm run server\" "
+    "start": "concurrently --kill-others \"npm run build\" \"npm run watch\" \"npm run server\" "
   },
   "devDependencies": {
     "bootstrap": "4.1.1",

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Simple HTML Template App</title>
   <link rel="stylesheet" href="{{ asset_path }}/css/bootstrap.css">
   <link rel="stylesheet" href="{{ asset_path }}/css/custom.css">
 </head>
@@ -10,7 +10,6 @@
   {% include "./partials/header.nunjucks" %}
   <div class="container-fluid">
     <div class="row flex-xl-nowrap">
-      {% include "./partials/side-menu.nunjucks" %}
       <main role="main">
         {% block content %}{% endblock %}
       </main>
