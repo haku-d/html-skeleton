@@ -1,2 +1,5 @@
 <!-- header.nunjucks -->
-{% include "./top-menu.nunjucks" %}
+<header class="navbar fixed-top text-center container">
+  <a class="float-left" href="/">BACK</a>
+  <span>{{ parameters.title }}</span>
+</header>

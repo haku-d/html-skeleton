@@ -1,47 +1,45 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var nunjucksRender = require('gulp-nunjucks-render');
-var data = require('gulp-data');
-var watch = require('gulp-watch');
+const { src, dest, series, parallel, watch } = require("gulp");
+const sass = require("gulp-sass");
+const nunjucksRender = require("gulp-nunjucks-render");
 
-var NUNJUCK_DIR = './src/**/*.nunjucks';
-var SASS_DIR = './src/assets/scss/**/*.scss';
-var SASS_DIST_DIR = './dist/assets/css';
-var IMG_DIR = './src/assets/img/**/*';
-var JS_DIR = './src/assets/js/**/*';
+const NUNJUCK_DIR = "./src/**/*.nunjucks";
+const SASS_DIR = "./src/assets/scss/**/*.scss";
+const SASS_DIST_DIR = "./dist/assets/css";
+const IMG_DIR = "./src/assets/img/**/*";
+const JS_DIR = "./src/assets/js/**/*";
 
-gulp.task('nunjucks', function () {
-  gulp.src('src/pages/**/*.+(html|nunjucks)')
-      .pipe(nunjucksRender({
-        path: 'src/templates',
+const nunjuckBuild = cb => {
+  return src("src/pages/**/*.+(html|nunjucks)")
+    .pipe(
+      nunjucksRender({
+        path: "src/templates",
         data: {
-          asset_path: '/assets'
+          asset_path: "/assets"
         }
-      }))
-      .pipe(gulp.dest('dist'));
-});
+      })
+    )
+    .pipe(dest("dist"));
+};
 
-gulp.task('sass', function () {
-  return gulp.src(SASS_DIR)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(SASS_DIST_DIR));
-});
- 
-gulp.task('img', function() {
-  return gulp.src(IMG_DIR)
-    .pipe(gulp.dest('./dist/assets/img'));
-});
+const sassBuild = cb => {
+  return src(SASS_DIR)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(dest(SASS_DIST_DIR));
+};
 
-gulp.task('js', function() {
-  return gulp.src(JS_DIR)
-    .pipe(gulp.dest('./dist/assets/js'));
-});
+const imgBuild = cb => {
+  return src(IMG_DIR).pipe(dest("./dist/assets/img"));
+};
 
-gulp.task('watch', function() {
-  gulp.watch(SASS_DIR, ['sass']);
-  gulp.watch(IMG_DIR, ['img']);
-  gulp.watch(JS_DIR, ['js']);
-  gulp.watch(NUNJUCK_DIR, { ignoreInitial: false }, ['nunjucks']);
-});
+const jsBuild = cb => {
+  return src(JS_DIR).pipe(dest("./dist/assets/js"));
+};
 
-gulp.task('build', ['sass', 'img', 'js', 'nunjucks']);
+const sassWatch = () => watch(SASS_DIR, sassBuild);
+const jsWatch = () => watch(JS_DIR, jsBuild);
+const imgWatch = () => watch(IMG_DIR, imgBuild);
+const nunjuckWatch = () =>
+  watch(NUNJUCK_DIR, { ignoreInitial: false }, nunjuckBuild);
+
+exports.build = series(sassBuild, imgBuild, jsBuild, nunjuckBuild);
+exports.default = parallel(sassWatch, imgWatch, jsWatch, nunjuckWatch);
