@@ -7,11 +7,12 @@
     "build": "gulp build",
     "watch": "gulp",
     "server": "http-server ./dist",
-    "start": "concurrently --kill-others \"npm run build\" \"npm run watch\" \"npm run server\" "
+    "start": "concurrently --kill-others \"npm run build\" \"npm run watch\" \"npm run server\" ",
+    "deploy": "gh-pages -d dist -b master"
   },
   "devDependencies": {
     "bootstrap": "^4.4.1",
-    "chokidar": "^3.3.1",
+    "chokidar": "^3.5.1",
     "concurrently": "^5.1.0",
     "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
